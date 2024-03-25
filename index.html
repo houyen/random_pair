@@ -1,0 +1,34 @@
+<head>
+    <title>RANDOM PAIR</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+
+<body>
+    <div class="App">
+        <header class="App-header">
+            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
+            <p>
+                GitHub Codespaces <span class="heart">♥️</span> Flask
+            </p>
+            
+        </header>
+    </div>
+    <form method="POST">
+        <select name="lottery_type">
+            <option value="mega">Mega</option>
+            <option value="power">Power</option>
+        </select>
+        <input type="submit" value="Generate">
+    </form>
+    <div>
+        {% if pairs %}
+            <h1>Numbers</h1>
+            <ul>
+                {% for pair in pairs %}
+                    <li>{{ pair }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</body>
+
+</html>
