@@ -12,23 +12,14 @@
             
         </header>
     </div>
-    <form method="POST">
-        <select name="lottery_type">
-            <option value="mega">Mega</option>
-            <option value="power">Power</option>
-        </select>
-        <input type="submit" value="Generate">
-    </form>
-    <div>
-        {% if pairs %}
-            <h1>Numbers</h1>
-            <ul>
-                {% for pair in pairs %}
-                    <li>{{ pair }}</li>
-                {% endfor %}
-            </ul>
-        {% endif %}
-    </div>
+    <select id="lottery_type">
+        <option value="mega">Mega</option>
+        <option value="power">Power</option>
+    </select>
+    <button onclick="generateNumbers()">Generate</button>
+    <div id="result"></div>
+
+    <script src="app.js"></script>
 </body>
 
 </html>
