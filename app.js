@@ -1,19 +1,19 @@
 function generateRandomMega() {
     let pairs = new Set();
     while (pairs.size < 6) {
-        let num = Math.floor(Math.random() * 46).toString().padStart(2, '0');
+        let num = Math.floor(Math.random() * 45 + 1).toString().padStart(2, '0');
         pairs.add(num);
     }
-    return Array.from(pairs);
+    return Array.from(pairs).sort((a, b) => a - b);
 }
 
 function generateRandomPower() {
     let pairs = new Set();
     while (pairs.size < 6) {
-        let num = Math.floor(Math.random() * 56).toString().padStart(2, '0');
+        let num = Math.floor(Math.random() * 55 + 1).toString().padStart(2, '0');
         pairs.add(num);
     }
-    return Array.from(pairs);
+    return Array.from(pairs).sort((a, b) => a - b);
 }
 
 function generateNumbers() {
