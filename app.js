@@ -56,8 +56,13 @@ function randomSlip(lists) {
 }
 
 function toggleCustomInput() {
-    const customInput = document.getElementById('custom_input');
-    const lotteryType = document.getElementById('lottery_type').value;
+    const checkbox = document.getElementById('custom-checkbox');
+    const customInputDiv = document.getElementById('custom-input');
+    if (checkbox.checked) {
+        customInputDiv.style.display = 'block';
+    } else {
+        customInputDiv.style.display = 'none';
+    }
 }
 function generateCustomNumbers() {
     const customInput = document.getElementById('custom_input').value;
