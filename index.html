@@ -14,7 +14,14 @@
     </select>
     <button onclick="generateNumbers()">Generate</button>
     <div id="result"></div>
-
+    <div>
+        <input type="checkbox" id="custom-checkbox" onclick="toggleCustomInput()" />
+        <label for="custom-checkbox">Use custom numbers</label>
+    </div>
+    <div id="custom-input" style="display: none;">
+        <input type="text" id="custom-numbers" placeholder="Enter your numbers (comma separated)" />
+        <button onclick="generateCustomNumbers()">Generate Custom</button>
+    </div>
     <script src="app.js"></script>
 
     <footer>
